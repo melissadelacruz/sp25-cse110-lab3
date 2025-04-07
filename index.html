@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- This is a comment -->
+  <title>Pomodoro Timer First Brainstorm</title>
+  <meta name="description" content="Meeting minutes for the first brainstorming session of the Pomodoro Timer team.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <h1>Pomodoro Timer First Brainstorm</h1>
+    <nav>
+      <ul>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#form">Feedback Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="attendance">Attendance</h2>
+      <ul>
+        <li>Melissa De La Cruz</li>
+        <li>Alex Johnson</li>
+        <li>Samira Patel</li>
+        <li>Daniel Kim</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="agenda">Agenda</h2>
+      <ol>
+        <li>Review project goals</li>
+        <li>Brainstorm timer features</li>
+        <li>Assign tasks</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Unfinished Business</h3>
+      <ul>
+        <li>Pick app colors</li>
+        <li>Decide on timer sound</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>New Business</h3>
+      <ul>
+        <li>Melissa <strong>suggested</strong> adding a <em>daily summary</em></li>
+        <li>Daniel <b>presented</b> a rough wireframe design</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Miscellaneous</h3>
+      <p>Alex <em>emphasized</em> the importance of accessibility.<br>Samira asked, "<i>Can we use offline mode?</i>"</p>
+      <hr>
+    </section>
+
+    <section>
+      <h2>Whiteboard Diagram</h2>
+      <figure>
+        <img src="diagram.png" alt="Pomodoro app diagram">
+        <figcaption>High-level overview of app components.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Meeting Media</h2>
+
+      <h3>Audio Recording</h3>
+      <audio controls>
+        <source src="meeting-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video Recording</h3>
+      <video controls width="500">
+        <source src="meeting-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section>
+      <h2>Bonus Info</h2>
+      <details>
+        <summary>What is the Pomodoro Technique?</summary>
+        <p>The Pomodoro Technique is a time management method using 25-minute focused work sessions followed by short breaks.</p>
+      </details>
+    </section>
+    
+    <!-- This comment explains something in one line -->
+
+    <section id="form">
+      <h2>Team Feedback Form</h2>
+      <form>
+        <fieldset>
+          <legend>Tell us what you thought!</legend>
+
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+
+          <label for="date">Meeting Date:</label>
+          <input type="date" id="date" name="date"><br><br>
+
+          <label>Did you attend the meeting?</label><br>
+          <input type="radio" id="yes" name="attended" value="yes">
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="attended" value="no">
+          <label for="no">No</label><br><br>
+
+          <label>Topics you found helpful:</label><br>
+          <input type="checkbox" id="features" name="topics" value="features">
+          <label for="features">Feature discussion</label><br>
+          <input type="checkbox" id="design" name="topics" value="design">
+          <label for="design">Design ideas</label><br><br>
+
+          <label for="feedback">Your Feedback:</label><br>
+          <textarea id="feedback" name="feedback" rows="4" cols="40"></textarea><br><br>
+
+          <label for="team-member">Your Role:</label>
+          <select id="team-member" name="role">
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="product">Product Owner</option>
+          </select><br><br>
+
+          <label for="team-choice">Favorite team member:</label>
+          <input list="team-list" id="team-choice" name="favorite">
+          <datalist id="team-list">
+            <option value="Melissa">
+            <option value="Alex">
+            <option value="Samira">
+            <option value="Daniel">
+          </datalist><br><br>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><span>Created by</span> Melissa & Team - April 6, 2025</p>
+  </footer>
+
+</body>
+</html>
+
