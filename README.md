@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-Lab 2 Website: https://melissadelacruz.github.io/Lab2CSE110/
+# Lab 3 - Starter
+Lab 3 Website: https://melissadelacruz.github.io/sp25-cse110-lab3/
