@@ -5,7 +5,8 @@
   <title>Pomodoro Timer First Brainstorm</title> <!-- Sets the title of the page, appears in the browser tab. -->
   <meta name="description" content="Meeting minutes for the first brainstorming session of the Pomodoro Timer team."> <!-- Gives a description of the page — helpful for search engines and browser previews. -->
   <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Links to a small image called a favicon (the icon that shows in the browser tab next to the title). -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+  
   <style>
     /* General CSS Topics */
     /* Comment: Stylesheet for Pomodoro Timer page layout and design */
@@ -13,7 +14,7 @@
     :root {
       --main-bg: hsl(210, 50%, 95%);
       --highlight: #FF5733;
-      --fallback-color: orange;
+      --fallback-color: rgb(237, 155, 3);
     }
 
     body {
@@ -25,6 +26,7 @@
     }
 
     header {
+      font-family: 'Bungee Spice', cursive;
       background-color: color-mix(in srgb, orange 70%, white); /* wider-gamut example */
       padding: 1em;
       border-bottom: 2px solid #ccc;
@@ -55,6 +57,7 @@
     }
 
     section {
+      scroll-margin-top: 120px; /* match your sticky header height */
       margin-bottom: 2em;
       background-color: #fff;
       padding: 1.5rem; /* relative unit */
@@ -139,9 +142,13 @@
     }
 
     /* Flexbox */
-    nav ul {
+    nav ul { /*navigation links within an unordered list is parent (header is an example of this)*/
       display: flex;
       justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      /*create children (parent style format*/
     }
 
     /* Grid */
@@ -149,9 +156,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1em;
+      align-items: start;
     }
 
-    /* Responsiveness */
+    /* Responsiveness (for devices) */
     @media screen and (max-width: 600px) {
       .feedback-grid {
         grid-template-columns: 1fr;
@@ -178,8 +186,8 @@
   </header>
 
   <main>
-    <section>
-      <h2 id="attendance">Attendance</h2>
+    <section id="attendance">
+      <h2>Attendance</h2>
       <ul> 
         <li>Melissa De La Cruz</li>
         <li>Alex Johnson</li>
@@ -188,8 +196,8 @@
       </ul>
     </section>
 
-    <section>
-      <h2 id="agenda">Agenda</h2>
+    <section id="agenda">
+      <h2>Agenda</h2>
       <ol>
         <li>Review project goals</li>
         <li>Brainstorm timer features</li>
