@@ -5,10 +5,167 @@
   <title>Pomodoro Timer First Brainstorm</title> <!-- Sets the title of the page, appears in the browser tab. -->
   <meta name="description" content="Meeting minutes for the first brainstorming session of the Pomodoro Timer team."> <!-- Gives a description of the page — helpful for search engines and browser previews. -->
   <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Links to a small image called a favicon (the icon that shows in the browser tab next to the title). -->
+
+  <style>
+    /* General CSS Topics */
+    /* Comment: Stylesheet for Pomodoro Timer page layout and design */
+
+    :root {
+      --main-bg: hsl(210, 50%, 95%);
+      --highlight: #FF5733;
+      --fallback-color: orange;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--main-bg, #f0f8ff); /* CSS variable with fallback */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: color-mix(in srgb, orange 70%, white); /* wider-gamut example */
+      padding: 1em;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--highlight, #FF5733); /* CSS variable with fallback */
+    }
+
+    nav ul { /*navigation links within an unordered list*/
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    main {
+      padding: 2rem; /* relative unit */
+      margin: auto;
+      max-width: 960px;
+    }
+
+    section {
+      margin-bottom: 2em;
+      background-color: #fff;
+      padding: 1.5rem; /* relative unit */
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem; /* relative unit */
+    }
+
+    figure img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+
+    audio, video {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    details {
+      background-color: #f9f9f9;
+      padding: 1em;
+      border: 1px solid #ccc;
+    }
+
+    /* Box Model */
+    section {
+      margin: 20px auto; /* shorthand margin */
+      padding: 1em 2em; /* shorthand padding */
+      border-width: 2px;
+      border-style: solid;
+      border-color: #ddd;
+    }
+
+    /* Text */
+    p {
+      color: rgb(60, 60, 60);
+      text-align: left;
+      text-decoration: none;
+    }
+
+    /* Display */
+    details, section, header {
+      display: block;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    /* Sizing */
+    img {
+      height: auto;
+      width: 100%;
+      max-width: 300px;
+      min-width: 200px;
+    }
+
+    /* Position */
+    footer {
+      position: relative;
+      text-align: center;
+      margin-top: 2em;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    /* Pseudo-classes */
+    nav a:hover {
+      color: #ff5733;
+    }
+
+    button:active {
+      background-color: #ddd;
+    }
+
+    /* Flexbox */
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Grid */
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+
+    /* Responsiveness */
+    @media screen and (max-width: 600px) {
+      .feedback-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+  </style>
 </head>
 <!-- The head section ends here. The body section begins below. -->
 <body>
-
   <header>
     <h1>Pomodoro Timer First Brainstorm</h1>
     <nav>
