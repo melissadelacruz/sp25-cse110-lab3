@@ -11,6 +11,12 @@
     /* General CSS Topics */
     /* Comment: Stylesheet for Pomodoro Timer page layout and design */
 
+    * { /*universal selector*/
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     :root {
       --main-bg: hsl(210, 50%, 95%);
       --highlight: #FF5733;
@@ -21,28 +27,86 @@
       font-family: 'Roboto', sans-serif;
       background-color: var(--main-bg, #f0f8ff); /* CSS variable with fallback */
       color: #333;
-      margin: 0;
-      padding: 0;
     }
 
-    header {
-      font-family: 'Bungee Spice', cursive;
-      background-color: color-mix(in srgb, orange 70%, white); /* wider-gamut example */
-      padding: 1em;
-      border-bottom: 2px solid #ccc;
-      text-align: center;
+    /* ID Selector */
+    #form {
+      border-top: 3px solid rgb(147, 192, 229);
+      padding-top: 1rem;
     }
 
-    h1 {
-      color: var(--highlight, #FF5733); /* CSS variable with fallback */
+     /* Class Selector */
+     .submit {
+      background-color: #3281d0;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5em 1em;
+      font-weight: bold; /* Combining Two Selectors (button.submit) */
     }
 
-    nav ul { /*navigation links within an unordered list*/
+    /* Element Selector */
+    section {
+      scroll-margin-top: 120px;
+      margin: 20px;
+      padding: 1em 2em;
+      background-color: #fff;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+
+    /* Pseudo-class Selector */
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    /* Combinators */
+    section p {
+      font-size: 1rem; /* Descendant */
+    }
+
+    /* Attribute Selector */
+    input[type="text"] {
+      border: 2px solid #ddd;
+      padding: 0.5em;
+    }
+
+    /* Selector List */
+    h2, h3 {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    form > fieldset {
+      background-color: #f4f4f4; /* Child */
+    }
+
+    h2 ~ p {
+      color: #555; /* General sibling */
+    }
+
+    h3 + ul {
+      margin-top: 1em; /* Adjacent sibling */
+    }
+
+    /* Nesting / Nested-like selectors */
+    form fieldset label {
+      font-weight: 600;
+    }
+
+    /* New Selector: :has() */
+    form:has(textarea) {
+      border: 2px dashed #ccc;
+    }
+
+    nav ul {
       list-style: none;
-      padding: 0;
       display: flex;
       justify-content: center;
       gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      display: inline-block;
     }
 
     nav ul li a {
@@ -51,22 +115,13 @@
     }
 
     main {
-      padding: 2rem; /* relative unit */
+      padding: 2rem;
       margin: auto;
       max-width: 960px;
     }
 
-    section {
-      scroll-margin-top: 120px; /* match your sticky header height */
-      margin-bottom: 2em;
-      background-color: #fff;
-      padding: 1.5rem; /* relative unit */
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
     ul, ol {
-      padding-left: 1.5rem; /* relative unit */
+      padding-left: 1.5rem;
     }
 
     figure img {
@@ -87,32 +142,11 @@
       border: 1px solid #ccc;
     }
 
-    /* Box Model */
-    section {
-      margin: 20px auto; /* shorthand margin */
-      padding: 1em 2em; /* shorthand padding */
-      border-width: 2px;
-      border-style: solid;
-      border-color: #ddd;
-    }
-
-    /* Text */
     p {
       color: rgb(60, 60, 60);
       text-align: left;
-      text-decoration: none;
     }
 
-    /* Display */
-    details, section, header {
-      display: block;
-    }
-
-    nav ul li {
-      display: inline-block;
-    }
-
-    /* Sizing */
     img {
       height: auto;
       width: 100%;
@@ -120,35 +154,31 @@
       min-width: 200px;
     }
 
-    /* Position */
-    footer {
-      position: relative;
-      text-align: center;
-      margin-top: 2em;
-    }
     header {
+      height: 120px;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background-color: color-mix(in srgb, rgb(255, 174, 23) 70%, white);
+      padding: 2em;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+      font-family: 'Bungee Spice', cursive;
     }
+
+    h1 {
+      color: var(--highlight); /* CSS variable with fallback */
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+
     
-    /* Pseudo-classes */
-    nav a:hover {
-      color: #ff5733;
-    }
-
-    button:active {
-      background-color: #ddd;
-    }
-
-    /* Flexbox */
-    nav ul { /*navigation links within an unordered list is parent (header is an example of this)*/
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      /*create children (parent style format*/
+    /* Pseudo-class */
+    button:hover {
+      background-color: #96c2e6;
     }
 
     /* Grid */
@@ -169,6 +199,7 @@
         flex-direction: column;
         gap: 0.5em;
       }
+      
     }
   </style>
 </head>
@@ -230,7 +261,7 @@
     <section>
       <h2>Whiteboard Diagram</h2>
       <figure>
-        <img src="diagram.png" alt="Pomodoro app diagram">
+        <img src="pomopic.png" alt="Pomodoro app diagram">
         <figcaption>High-level overview of app components.</figcaption>
       </figure>
     </section>
@@ -303,7 +334,7 @@
             <option value="Daniel">
           </datalist><br><br>
 
-          <button type="submit">Submit</button>
+          <button type="submit" class="submit">Submit</button>
         </fieldset>
       </form>
     </section>
@@ -315,4 +346,3 @@
 
 </body>
 </html>
-
